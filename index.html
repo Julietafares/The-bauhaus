@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bauhaus</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1 class="main-title">THE<br>BAUHAUS</h1>
+        <nav class="main-nav">
+            <a href="historia.html" class="nav-item history">Historia</a>
+            <a href="obras_y_disenos.html" class="nav-item works">Obras y diseños</a>
+            <a href="figuras_claves.html" class="nav-item figures">Figuras claves</a>
+            <a href="principios_y_filosofia.html" class="nav-item principles">Principios y filosofía</a>
+            <a href="comunidad.php" class="nav-item community">Comunidad</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero-section">
+
+            <img src="./imagenes/formas_geometricas_home.svg" alt="Formas geométricas decorativas" class="decorative-shapes">
+
+            <div class="content-card">
+                <div class="text-content">
+                    <h2>El mundo del Arte</h2>
+                    <p>La Bauhaus revolucionó el diseño y la arquitectura al unir arte y funcionalidad. Nacida en Alemania en 1919, marcó un antes y un después con su estilo moderno, simple y geométrico, cuyo legado sigue influyendo en la vida cotidiana.</p>
+                    <a href="historia.html" class="cta-button">Conoce más</a>
+                </div>
+                <div class="image-container">
+                    </div>
+            </div>
+        </div>
+    </main>
+    
+    <section class="image-block-section">
+        <div class="collage-container">
+            <img src="./imagenes/anni_albers_homee.svg" alt="Anni Albers trabajando en su telar" class="collage-image-large">
+            <div class="collage-column-right">
+                <img src="./imagenes/walter_gropius_home.svg" alt="Walter Gropius" class="collage-image-small">
+                <img src="./imagenes/marcel_breuer_homee.svg" alt="Marcel Breuer" class="collage-image-small">
+            </div>
+        </div>
+        <a href="figuras_claves.html" class="section-button">Ver Figuras Claves</a>
+    </section>
+
+    <!-- Bauhaus: Carrusel -->
+    <section class="bau-carousel-wrapper" role="region" aria-label="Carrusel de obras destacadas de la Bauhaus">
+        <div class="bau-carousel-container">
+            <ul class="bau-carousel-track">
+                <li class="bau-carousel-slide current-slide" aria-current="true">
+                    <figure class="bau-carousel-card">
+                        <a href="obras_y_disenos.html#lampara-kandem"><img src="./imagenes/lampara_kandem.svg" alt="Lámpara de mesa Kandem diseñada por Marianne Brandt."></a>
+                        <figcaption class="bau-carousel-caption">Lámpara Kandem — Marianne Brandt (1928)</figcaption>
+                    </figure>
+                </li>
+                <li class="bau-carousel-slide">
+                    <figure class="bau-carousel-card">
+                        <a href="obras_y_disenos.html#senecio"><img src="./imagenes/senecio.svg" alt="Pintura Senecio de Paul Klee, un rostro abstracto con formas geométricas."></a>
+                        <figcaption class="bau-carousel-caption">Senecio — Paul Klee (1922)</figcaption>
+                    </figure>
+                </li>
+                <li class="bau-carousel-slide">
+                    <figure class="bau-carousel-card">
+                        <a href="obras_y_disenos.html#lampara-wagenfeld"><img src="./imagenes/lampara_wangenfeld.svg" alt="Lámpara de mesa Wagenfeld WG24, con base de cristal y pantalla opalina."></a>
+                        <figcaption class="bau-carousel-caption">Lámpara Wagenfeld (WG24) — Wilhelm Wagenfeld (1924)</figcaption>
+                    </figure>
+                </li>
+                <li class="bau-carousel-slide">
+                    <figure class="bau-carousel-card">
+                        <a href="obras_y_disenos.html#silla-wassily"><img src="./imagenes/silla_wassily.svg" alt="Silla Wassily de Marcel Breuer, con estructura de tubos de acero y cuero."></a>
+                        <figcaption class="bau-carousel-caption">Silla Wassily — Marcel Breuer (1925)</figcaption>
+                    </figure>
+                </li>
+                <li class="bau-carousel-slide">
+                    <figure class="bau-carousel-card">
+                        <a href="obras_y_disenos.html#composicion-viii"><img src="./imagenes/composicion_viii.svg" alt="Pintura Composición VIII de Wassily Kandinsky, una obra abstracta con múltiples formas y colores."></a>
+                        <figcaption class="bau-carousel-caption">Composición VIII — Wassily Kandinsky (1923)</figcaption>
+                    </figure>
+                </li>
+            </ul>
+    
+            <button class="bau-carousel-btn bau-carousel-btn--prev" aria-label="Slide anterior">‹</button>
+            <button class="bau-carousel-btn bau-carousel-btn--next" aria-label="Slide siguiente">›</button>
+    
+            <div class="bau-carousel-nav" aria-label="Navegación de slides">
+                <!-- Los bullets se generarán con JavaScript -->
+            </div>
+            <div class="bau-carousel-live-region" aria-live="polite" role="status"></div>
+        </div>
+    </section>
+    <!-- Fin Bauhaus: Carrusel -->
+
+    <!-- Bauhaus: Filosofía -->
+    <section class="philosophy-section">
+        <img src="./imagenes/filosofia_home.svg" alt="Esquema visual sobre la filosofía de la Bauhaus, mostrando la interconexión de arte, artesanía y tecnología.">
+        <div class="philosophy-text-box">
+            <p class="philosophy-pre-title">bauhaus</p>
+            <h3>Filosofía del Arte</h3>
+            <p>Colaboración entre artes y oficios, claridad formal y producción accesible. Un movimiento que hizo del “menos es más” una práctica social.</p>
+            <a href="principios_y_filosofia.html" class="philosophy-button">Conoce más</a>
+        </div>
+    </section>
+    <!-- Fin Bauhaus: Filosofía -->
+
+    <!-- Bauhaus: Formas -->
+    <section class="features-section">
+        <div class="features-text">
+            <h3>El ahora</h3>
+            <p>La Bauhaus priorizaba la simplicidad y la utilidad. Cada línea y cada material tenían un propósito, eliminando lo superfluo para crear objetos bellos y funcionales que mejoraran la vida diaria. Para actualizaciones ofrecemos una comunidad.</p>
+            <a href="comunidad.php" class="features-button">quiero unirme!</a>
+        </div>
+        <img src="./imagenes/formas_home.svg" alt="Composición abstracta con las formas geométricas y colores primarios característicos de la Bauhaus.">
+    </section>
+    <!-- Fin Bauhaus: Formas -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <p>+5493794951960</p>
+                <p>bauhaus@gmail.com</p>
+            </div>
+            <div class="footer-column">
+                <h4>Sobre nosotros</h4>
+                <p>“Un espacio para descubrir la Bauhaus desde su legado hasta la actualidad”</p>
+            </div>
+            <div class="footer-column">
+                <h4>Newsletter</h4>
+                <p>“Suscribite para recibir novedades”</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="carousel.js"></script>
+    <script src="scroll.js"></script>
+</body>
+</html>

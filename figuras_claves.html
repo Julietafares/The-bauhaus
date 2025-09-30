@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras Claves - The Bauhaus</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="static-page">
+
+    <header>
+        <a href="index.html" class="title-link">
+            <h1 class="main-title">THE<br>BAUHAUS</h1>
+        </a>
+        <nav class="main-nav">
+            <a href="historia.html" class="nav-item history">Historia</a>
+            <a href="obras_y_disenos.html" class="nav-item works">Obras y diseños</a>
+            <a href="figuras_claves.html" class="nav-item figures">Figuras claves</a>
+            <a href="principios_y_filosofia.html" class="nav-item principles">Principios y filosofía</a>
+            <a href="comunidad.php" class="nav-item community">Comunidad</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1 class="page-title">Figuras Claves</h1>
+            <div class="intro-banner">
+                <p>
+                    Detrás de la Bauhaus hubo mentes visionarias que rompieron con lo tradicional. Desde sus directores como Walter Gropius y Mies van der Rohe, hasta maestros como Kandinsky, Klee y Moholy-Nagy, cada figura aportó una perspectiva única que enriqueció la filosofía de la escuela y dejó un legado imborrable.
+                </p>
+            </div>
+        </section>
+        
+        <section class="figures-grid">
+            <figure class="figure-card" data-modal-target="#modal-walter-gropius">
+                <img src="imagenes/walterfigura.svg" alt="Retrato de Walter Gropius">
+                <figcaption>Walter Gropius</figcaption>
+            </figure>
+            <figure class="figure-card" data-modal-target="#modal-paul-klee">
+                <img src="imagenes/paulfigura.svg" alt="Retrato de Paul Klee">
+                <figcaption>Paul Klee</figcaption>
+            </figure>
+            <figure class="figure-card" data-modal-target="#modal-laszlo-moholy-nagy">
+                <img src="imagenes/laszlofigura.svg" alt="Retrato de László Moholy-Nagy">
+                <figcaption>László Moholy-Nagy</figcaption>
+            </figure>
+            <figure class="figure-card" data-modal-target="#modal-wassily-kandinsky">
+                <img src="imagenes/wassilyfigura.svg" alt="Retrato de Wassily Kandinsky">
+                <figcaption>Wassily Kandinsky</figcaption>
+            </figure>
+            <figure class="figure-card" data-modal-target="#modal-anni-albers">
+                <img src="imagenes/annifigura.svg" alt="Retrato de Anni Albers">
+                <figcaption>Anni Albers</figcaption>
+            </figure>
+            <figure class="figure-card" data-modal-target="#modal-marcel-breuer">
+                <img src="imagenes/marcelfigura.svg" alt="Retrato de Marcel Breuer">
+                <figcaption>Marcel Breuer</figcaption>
+            </figure>
+        </section>
+
+        <!-- Overlay y Modal para Walter Gropius -->
+        <div id="modal-overlay" class="modal-overlay"></div>
+
+        <div id="modal-walter-gropius" class="modal">
+            <div class="modal-content">
+                <button class="close-modal-btn" aria-label="Cerrar">&times;</button>
+                <h2>Walter Gropius</h2>
+                <p>Walter Gropius (1883–1969) fue un arquitecto y diseñador alemán, reconocido como el fundador de la Bauhaus y su director desde 1919 hasta 1928. Su visión revolucionaria buscaba integrar el arte, la arquitectura, la artesanía y la tecnología en un único lenguaje moderno, funcional y accesible.</p>
+                <p>Bajo su dirección, la Bauhaus se convirtió en un centro innovador que unió a artistas y diseñadores como Paul Klee, Wassily Kandinsky y Marcel Breuer. Gropius impulsó la idea de que la forma debía seguir a la función, estableciendo las bases del diseño moderno y marcando profundamente la arquitectura del siglo XX.</p>
+                <p>Tras su paso por la Bauhaus, continuó su carrera en Europa y más tarde en Estados Unidos, donde influyó en nuevas generaciones de arquitectos. Su legado sigue vivo en el diseño contemporáneo, mostrando cómo la creatividad y la funcionalidad pueden convivir en armonía.</p>
+            </div>
+        </div>
+
+        <!-- Modal para Paul Klee -->
+        <div id="modal-paul-klee" class="modal">
+            <div class="modal-content">
+                <button class="close-modal-btn" aria-label="Cerrar">&times;</button>
+                <h2>Paul Klee</h2>
+                <p>Paul Klee (1879–1940) fue un pintor suizo-alemán cuya obra se caracteriza por su lenguaje visual poético y abstracto, lleno de colores, símbolos y formas geométricas. Como profesor en la Bauhaus (1921–1931), Klee aportó una mirada única que unía la experimentación artística con la teoría del color y la composición.</p>
+                <p>Su estilo combinó influencias del expresionismo, cubismo y surrealismo, pero siempre con un sello personal marcado por la fantasía, el humor y lo onírico. A través de sus escritos y clases, transmitió a los estudiantes la idea de que el arte debía ser una exploración interior tanto como una construcción formal.</p>
+                <p>Hoy, Paul Klee es considerado uno de los artistas más influyentes del siglo XX. Sus obras siguen inspirando por su capacidad de unir la sensibilidad artística con la investigación visual, mostrando que la creatividad no tiene límites.</p>
+            </div>
+        </div>
+
+        <!-- Modal para László Moholy-Nagy -->
+        <div id="modal-laszlo-moholy-nagy" class="modal">
+            <div class="modal-content">
+                <button class="close-modal-btn" aria-label="Cerrar">&times;</button>
+                <h2>László Moholy-Nagy</h2>
+                <p>László Moholy-Nagy (1895–1946) fue un artista y profesor húngaro, figura clave de la Bauhaus. Se destacó por su enfoque innovador que unía arte, diseño y tecnología, explorando materiales industriales y nuevas técnicas visuales.</p>
+                <p>En la Bauhaus, Moholy-Nagy impulsó el uso de la fotografía, el fotomontaje y la tipografía experimental como herramientas artísticas, además de experimentar con la luz y el movimiento en sus célebres “moduladores de luz-espacio”. Su visión buscaba borrar las fronteras entre el arte y la vida cotidiana, llevando la modernidad a todas las formas de creación.</p>
+                <p>Tras emigrar a Estados Unidos, fundó en Chicago la New Bauhaus, continuando la misión de integrar creatividad y funcionalidad en la enseñanza del diseño. Su legado transformó la manera de entender el arte en la era moderna y abrió el camino a la estética contemporánea.</p>
+            </div>
+        </div>
+
+        <!-- Modal para Wassily Kandinsky -->
+        <div id="modal-wassily-kandinsky" class="modal">
+            <div class="modal-content">
+                <button class="close-modal-btn" aria-label="Cerrar">&times;</button>
+                <h2>Wassily Kandinsky</h2>
+                <p>Wassily Kandinsky (1866–1944) fue un pintor y teórico del arte ruso, reconocido como uno de los pioneros del arte abstracto. Su obra rompió con la representación figurativa tradicional para dar paso a un lenguaje visual basado en formas, líneas y colores que expresaban emociones y espiritualidad.</p>
+                <p>En la Bauhaus (1922–1933), Kandinsky enseñó teoría del color y composición, transmitiendo a sus alumnos la idea de que cada color y forma posee un efecto psicológico y simbólico. Sus escritos, como De lo espiritual en el arte, marcaron un antes y un después en la historia del arte moderno.</p>
+                <p>Su legado trasciende la pintura: Kandinsky demostró que el arte podía compararse a la música, transmitiendo sensaciones más allá de lo visible. Hoy sigue siendo una referencia fundamental para comprender la abstracción y la fuerza expresiva del color.</p>
+            </div>
+        </div>
+
+        <!-- Modal para Anni Albers -->
+        <div id="modal-anni-albers" class="modal">
+            <div class="modal-content">
+                <button class="close-modal-btn" aria-label="Cerrar">&times;</button>
+                <h2>Anni Albers</h2>
+                <p>Anni Albers (1899–1994) fue una artista y diseñadora textil alemana, reconocida como una de las figuras más influyentes de la Bauhaus y pionera en el arte del tejido moderno. Ingresó a la escuela en 1922 y, pese a las limitaciones de género de la época, se destacó en el taller de textiles, transformándolo en un espacio de innovación.</p>
+                <p>Su obra unió la tradición artesanal con la modernidad industrial, explorando nuevas técnicas, materiales y patrones geométricos que definieron la estética de la Bauhaus. Albers llevó el tejido más allá de lo decorativo, convirtiéndolo en un lenguaje artístico y funcional.</p>
+                <p>Tras emigrar a Estados Unidos con su esposo Josef Albers, continuó su labor como docente y creadora en el Black Mountain College y más tarde en Yale. Su influencia perdura en el diseño contemporáneo, mostrando cómo el textil puede ser un medio de experimentación artística y un puente entre arte y vida cotidiana.</p>
+            </div>
+        </div>
+
+        <!-- Modal para Marcel Breuer -->
+        <div id="modal-marcel-breuer" class="modal">
+            <div class="modal-content">
+                <button class="close-modal-btn" aria-label="Cerrar">&times;</button>
+                <h2>Marcel Breuer</h2>
+                <p>Marcel Breuer (1902–1981) fue un arquitecto y diseñador húngaro, formado en la Bauhaus, donde luego también ejerció como profesor. Se destacó por su capacidad para unir funcionalidad y estética moderna, explorando materiales industriales en objetos de uso cotidiano y en arquitectura.</p>
+                <p>En el taller de muebles de la Bauhaus, Breuer creó diseños icónicos como la silla Wassily y la silla Cesca, pioneras en el uso de tubos de acero curvados, que marcaron un antes y un después en el mobiliario moderno. Su enfoque buscaba que el diseño fuera accesible, práctico y adaptable a la vida contemporánea.</p>
+                <p>Más tarde, desarrolló una prolífica carrera como arquitecto en Europa y Estados Unidos, participando en proyectos de gran escala que consolidaron el movimiento moderno. Su legado lo posiciona como una figura central en el diseño del siglo XX, demostrando que la innovación técnica y la creatividad pueden transformar la forma en que vivimos.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <p>+5493794951960</p>
+                <p>bauhaus@gmail.com</p>
+            </div>
+            <div class="footer-column">
+                <h4>Sobre nosotros</h4>
+                <p>“Un espacio para descubrir la Bauhaus desde su legado hasta la actualidad”</p>
+            </div>
+            <div class="footer-column">
+                <h4>Newsletter</h4>
+                <p>“Suscribite para recibir novedades”</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="modal.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,992 @@
+html {
+    scroll-behavior: smooth; /* Añade un desplazamiento suave a las anclas */
+}
+
+ body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f3e9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Es importante para que los elementos absolutos se posicionen dentro del body */
+    overflow-x: hidden;
+}
+
+/* --- Header Fijo --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f7f3e9; /* Mismo color que el fondo del body */
+    z-index: 100; /* Asegura que esté por encima de todo */
+    transition: background-color 0.3s ease;
+}
+
+/* --- Navegación --- */
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 30px;
+    position: relative; /* Necesario para posicionar la línea */
+    z-index: 10;
+}
+
+/* Línea decorativa debajo de la navegación */
+.main-nav::after {
+    content: '';
+    position: absolute;
+    bottom: 5px; /* Distancia de la línea a los botones */
+    right: 30px; /* Alinea la línea con el padding de la navegación */
+    width: 710px; /* Aumentamos el ancho para compensar el nuevo margen */
+    height: 1px; /* Grosor de la línea */
+    background-color: #333; /* Color de la línea */
+}
+
+.nav-item {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 2px;
+    margin-left: 20px; /* Aumentamos el espacio entre botones */
+}
+
+.nav-item.history { background-color: #186aaa; }
+.nav-item.works { background-color: #f9bb15; }
+.nav-item.figures { background-color: #e4242a; }
+.nav-item.principles { background-color: #186aaa; }
+.nav-item.community { background-color: #f9bb15; }
+
+/* --- Contenido Principal --- */
+main {
+    padding-top: 70px; /* Añade espacio para el header fijo */
+}
+
+.page-header {
+    text-align: center;
+    padding: 40px 5% 20px;
+}
+
+.page-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.intro-banner {
+    background-color: #f9bb15; /* Amarillo Bauhaus */
+    padding: 25px 40px;
+    max-width: 900px;
+    margin: 0 auto 40px; /* Centra el banner y le da espacio inferior */
+    border-radius: 5px;
+}
+
+.intro-banner p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+}
+
+/* --- Historia: Línea de Tiempo --- */
+.history-timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px 0;
+}
+
+/* Línea central de la línea de tiempo */
+.history-timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #e4242a; /* Rojo Bauhaus */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+/* Círculo en la línea de tiempo */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: #f7f3e9;
+    border: 3px solid #186aaa; /* Azul Bauhaus */
+    top: 30px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Posicionamiento de las tarjetas */
+.timeline-item:nth-child(odd) { left: 0; }
+.timeline-item:nth-child(even) { left: 50%; }
+
+/* Flechas de las tarjetas */
+.timeline-item:nth-child(odd)::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 32px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #f9bb15;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #f9bb15;
+}
+
+.timeline-item:nth-child(even)::after { left: -10px; }
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: #f9bb15; /* Amarillo Bauhaus */
+    position: relative;
+    border-radius: 6px;
+}
+
+.timeline-content h2 {
+    margin-top: 0;
+}
+
+.timeline-content ul {
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+/* --- Sección de Contenido de Filosofía --- */
+.philosophy-content-section {
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos al inicio */
+    gap: 40px;
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.philosophy-left-column {
+    flex: 1; /* Ocupa una parte del espacio */
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.philosophy-left-column img {
+    width: 100%; /* Las imágenes ocupan el ancho de la columna */
+    border-radius: 5px;
+}
+
+.philosophy-text-block {
+    flex: 1.5; /* Ocupa una parte y media, para ser un poco más ancho */
+    background-color: #f9bb15; /* Amarillo Bauhaus */
+    padding: 30px 40px;
+    border-radius: 5px;
+}
+
+.philosophy-right-column {
+    flex: 1.5; /* Ocupa una parte y media, para ser un poco más ancho */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.philosophy-text-block h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.philosophy-image-bottom {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.philosophy-image-middle {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* --- Figuras Claves Page --- */
+.figures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.figure-card {
+    margin: 0;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.figure-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.figure-card { cursor: pointer; } /* Añade cursor de puntero a las tarjetas */
+
+.figure-card img {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 300px; /* Le damos una altura fija para que sea cuadrada */
+    object-fit: cover; /* La imagen cubre el espacio sin deformarse */
+}
+
+.figure-card figcaption {
+    padding: 15px;
+    font-weight: 700;
+}
+
+/* --- Estilos para el Modal --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: #f7f3e9;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 700px;
+    z-index: 1001;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.modal.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: all;
+}
+
+.modal-content {
+    padding: 40px 50px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+.modal-content p {
+    line-height: 1.8;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #888;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.works-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 30px; /* Espacio entre las tarjetas */
+    padding: 40px 5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.work {
+    display: flex;
+    width: 45%; /* Ancho para que quepan dos por línea con espacio */
+    min-width: 300px; /* Ancho mínimo para dispositivos pequeños */
+    margin-bottom: 30px; /* Espacio entre bloques */
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Cambiamos el fondo a blanco para mejor contraste */
+    color: #000; /* Texto negro */
+    scroll-margin-top: 120px; /* Margen superior para que el ancla no quede bajo el header */
+}
+
+/* Alterna la posición de la imagen en las tarjetas pares */
+.work:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.work-image {
+    width: 40%;
+    background-color: #0765a7; /* Fondo azul para la imagen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.work-description {
+    width: 60%;
+    padding: 15px 20px; /* Reducimos el padding para acercar el texto */
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.work-description h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.static-page main {
+    padding-top: 100px; /* Ajustamos el padding para páginas estáticas */
+}
+
+/* --- Sección Principal (Hero) --- */
+.hero-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-title {
+    font-size: 80px;
+    line-height: 0.8;
+    font-weight: 700;
+    position: absolute;
+    left: 100px;
+    top: 70px;
+    z-index: 20;
+    color: #050505;
+    transition: all 0.4s ease;
+}
+
+.static-page .main-title {
+    font-size: 20px;
+    line-height: 1;
+    top: 5px;
+    left: 30px;
+    color: #010101;
+}
+
+.title-link {
+    text-decoration: none; /* Quita el subrayado del enlace del título */
+    color: inherit; /* Hereda el color del texto padre */
+}
+
+.main-title.sticky {
+    font-size: 20px;
+    line-height: 1;
+    top: 5px; /* Lo subimos un poco para que se alinee mejor */
+    left: 30px;
+    color: #010101;
+    z-index: 110
+}
+
+.decorative-shapes {
+    position: absolute;
+    top: 200px; /* Posición vertical, entre el título y la tarjeta */
+    left: 13%;
+    transform: translateX(-50%);
+    width: 600px; /* Ancho de la imagen */
+    z-index: 15; /* Se asegura que esté sobre la tarjeta gris */
+}
+
+.content-card {
+    display: flex;
+    background-color: #e0e0e0;
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    align-items: center; /* Centra los items verticalmente */
+    padding: 40px;
+    border-radius: 3px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.111);
+    position: absolute;
+    top: 200px; /* Posiciona el recuadro gris */
+    left: 50%; /* Posiciona el recuadro gris a la derecha */
+    transform: translateX(-50%);
+    width: 80%;
+    height: 400px; /* Usamos height para un tamaño consistente */
+    z-index: 10;
+}
+
+.text-content {
+    padding-right: 20px;
+    max-width: 350px; /* Limita el ancho del bloque de texto */
+    text-align: right; /* Alinea el contenido (h2, p, button) a la derecha */
+}
+
+.text-content h2 {
+    font-size: 24px;
+    font-style: italic;
+    margin-top: 0;
+}
+
+
+.cta-button {
+    display: inline-block; /* Asegura que el padding se aplique correctamente en el <a> */
+    background-color: #888;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.image-container {
+    width: 500px; /* Hacemos la imagen más ancha */
+    height: 100%; /* Ocupa toda la altura del padre */
+    background-image: url(./imagenes/bauhaus_estructura_home.svg); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+/* --- Nuevo Bloque de Imagen --- */
+.image-block-section {
+    padding: 20px 40px 80px; /* Reducimos el espacio superior a 20px */
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Espacio entre el collage y el botón */
+}
+
+.collage-container {
+    display: flex;
+    gap: 20px; /* Espacio entre columnas */
+    width: 90%; /* Hacemos el collage más ancho */
+    max-width: 1400px; /* Aumentamos el ancho máximo */
+}
+
+.collage-image-large {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.collage-column-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre las imágenes de la derecha */
+}
+
+.collage-image-small {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* --- Botón de Sección --- */
+.section-button {
+    display: inline-block;
+    background-color: #e4242a; /* Rojo Bauhaus */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.section-button:hover {
+    background-color: #c21e23; /* Rojo más oscuro */
+    transform: translateY(-2px);
+}
+/* --- Bauhaus: Carrusel --- */
+.bau-carousel-wrapper {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.bau-carousel-container {
+    position: relative;
+    max-width: 1200px;
+    width: 90%; /* Ancho del contenedor principal */
+    margin: 0 auto;
+    overflow: hidden; /* Oculta los slides que no están en el viewport */
+}
+
+.bau-carousel-track {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: grab;
+}
+
+.bau-carousel-track.is-animating {
+    transition: transform 400ms ease; /* Transición solicitada */
+}
+
+.bau-carousel-slide {
+    flex: 0 0 80%; /* Ancho de cada slide, deja espacio para los vecinos */
+    padding: 20px;
+    box-sizing: border-box;
+    transform: scale(0.9); /* Hace los slides no activos un poco más pequeños */
+    transition: transform 400ms ease;
+    opacity: 0.7;
+}
+
+.bau-carousel-slide.current-slide {
+    transform: scale(1); /* El slide activo recupera su tamaño original */
+    opacity: 1;
+}
+
+.bau-carousel-card {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    padding-top: 100%; /* Mantiene la proporción cuadrada */
+    background-color: #0E5AA7;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bau-carousel-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Centra la imagen sin deformarla */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.bau-carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+}
+
+/* Interacción de Overlay y Foco */
+.bau-carousel-card:hover .bau-carousel-caption,
+.bau-carousel-card:focus-within .bau-carousel-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.bau-carousel-card:hover img,
+.bau-carousel-card:focus-within img {
+    transform: scale(1.05);
+}
+
+/* Botones de Navegación */
+.bau-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease;
+}
+
+.bau-carousel-btn:hover,
+.bau-carousel-btn:focus {
+    background-color: white;
+    outline: 2px solid #0E5AA7;
+    outline-offset: 2px;
+}
+
+.bau-carousel-btn--prev { left: 10px; } /* Posición de las flechas */
+.bau-carousel-btn--next { right: 10px; }
+.bau-carousel-btn[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Navegación con Bullets (opcional) */
+.bau-carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.bau-carousel-bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #0E5AA7;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.bau-carousel-bullet.current-slide {
+    background-color: #0E5AA7;
+}
+
+.bau-carousel-bullet:focus {
+    outline: 2px solid #0E5AA7;
+    outline-offset: 2px;
+}
+
+/* Región para lectores de pantalla */
+.bau-carousel-live-region {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* --- Diseño Responsivo del Carrusel --- */
+/* Tablet */
+@media (min-width: 768px) {
+    .bau-carousel-slide {
+        flex-basis: 60%;
+    }
+}
+
+/* El diseño ahora es de 1 item centrado en todos los tamaños */
+
+/* --- Bauhaus: Sección Filosofía --- */
+.philosophy-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; /* Espacio entre la imagen y el cuadro de texto */
+    padding: 80px 0 0; /* Eliminamos el padding inferior para que no empuje al siguiente bloque */
+}
+
+.philosophy-section img {
+    width: 40%;
+    max-width: 700px;
+    display: block; /* Elimina espacios extra debajo de la imagen */
+}
+
+.philosophy-text-box {
+    background-color: #d4c2a7;
+    border: 3px solid #333;
+    padding: 40px;
+    max-width: 700px; /* Hacemos el cuadro de texto más grande */
+    min-height: 250px; /* Aumentamos la altura mínima del cuadro */
+    text-align: center; /* Centra horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+}
+
+.philosophy-pre-title {
+    font-weight: 400; /* Un peso más fino */
+    font-size: 16px;
+    margin: 0 0 10px 0;
+}
+
+.philosophy-text-box h3 {
+    font-size: 28px;
+    margin: 0 0 15px 0;
+}
+
+.philosophy-text-box p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.philosophy-button {
+    display: inline-block;
+    background-color: #888; /* Color gris */
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 20px; /* Espacio sobre el botón */
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+.philosophy-button:hover {
+    background-color: #666; /* Un gris más oscuro al pasar el mouse */
+}
+
+/* --- Bauhaus: Sección Formas --- */
+.features-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Reducimos el espacio para acercar el texto a la imagen */
+    padding: 40px 5% 80px; /* Le damos un poco de espacio superior y mantenemos el inferior */
+}
+
+.features-text {
+    max-width: 450px;
+    text-align: right;
+}
+
+.features-text h3 {
+    font-size: 80px; /* Aumentamos el tamaño para que parezca un título */
+    font-weight: 700; /* Lo hacemos más grueso (negrita) */
+    margin-bottom: 15px;
+}
+
+.features-section img {
+    max-width: 800px;
+    width: 70%;
+}
+
+.features-button {
+    display: inline-block;
+    background-color: #f9bb15; /* Amarillo Bauhaus */
+    color: #333;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px; /* Esto lo hace ovalado */
+    margin-top: 20px;
+    font-weight: 700;
+    transition: transform 0.2s ease;
+}
+
+.features-button:hover {
+    transform: translateY(-2px); /* Pequeño efecto al pasar el mouse */
+}
+
+/* --- Footer --- */
+footer {
+    border-top: 1px solid #ccc; /* Línea fina de separación */
+    padding: 50px 5%;
+    background-color: #f7f3e9; /* Color de fondo principal */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center; /* Centra los elementos en el contenedor */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    width: 30%; /* Asignamos un ancho a cada columna */
+}
+
+/* Alineamos el texto de cada columna */
+.footer-column:nth-child(1) { text-align: left; }
+.footer-column:nth-child(2) { text-align: center; }
+.footer-column:nth-child(3) { text-align: right; }
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 8px 0;
+    color: #555;
+}
+
+/* --- Estilos para la página de Comunidad (Registro) --- */
+.community-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 120px 20px 40px;
+    box-sizing: border-box;
+}
+
+.registro-container {
+    position: relative;
+    background-size: cover;
+    background-color: #186aaa;
+    background-position: center;
+    color: #fff;
+    padding: 50px 60px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Overlay oscuro para legibilidad */
+.registro-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay oscuro */
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.registro-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.registro-header h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.registro-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 5px 0 0;
+}
+
+.registro-form .form-group {
+    margin-bottom: 30px;
+}
+
+.registro-form .form-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+    transition: border-bottom-color 0.3s;
+}
+
+.registro-form .form-input:focus {
+    border-bottom-color: #fff;
+}
+
+/* Estilo para el texto del placeholder */
+.registro-form .form-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 1; /* Firefox necesita esto */
+}
+
+.submit-group {
+    text-align: right;
+    margin-top: 40px;
+}
+
+.submit-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.submit-btn span {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.submit-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+.submit-btn:hover span, .submit-btn:focus span {
+    transform: translateX(5px);
+}
+
+/* --- Mensajes de PHP --- */
+.mensaje {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.mensaje.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.mensaje.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Estilo para campos inválidos */
+.campo-invalido {
+    border-bottom-color: #e74c3c !important;
+    box-shadow: 0 2px 0 0 #e74c3c;
+}

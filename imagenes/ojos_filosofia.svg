@@ -1,0 +1,15 @@
+<svg width="600" height="800" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="800" fill="#f0eada"/>
+  <!-- Left Eye -->
+  <circle cx="200" cy="300" r="100" fill="#0765a7"/>
+  <circle cx="200" cy="300" r="40" fill="#f9bb15"/>
+  <circle cx="200" cy="300" r="15" fill="#333"/>
+  
+  <!-- Right Eye -->
+  <rect x="350" y="450" width="200" height="200" fill="#e4242a"/>
+  <rect x="425" y="525" width="50" height="50" fill="#f0eada"/>
+
+  <!-- Decorative lines -->
+  <line x1="50" y1="100" x2="550" y2="700" stroke="#333" stroke-width="3"/>
+  <line x1="550" y1="100" x2="50" y2="700" stroke="#333" stroke-width="2" stroke-dasharray="10,10"/>
+</svg>
